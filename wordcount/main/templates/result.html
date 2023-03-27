@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta name="veiwpoint" content="width=device-width, initial-scale=1.0" />
+    <title>WordCount</title>
+  </head>
+<body>
+  <h1>결과</h1>
+  <a href={% url 'main' %}>메인페이지로</a>
+  <hr>
+  {% for word,value in words %}
+  <a  href="https://ko.wikipedia.org/wiki/{{word}}"><p>단어:
+    {{word}}: 갯수:{{value}}
+  </p></a>
+    <br/>
+  {% endfor %}
+
+ 
+</body>
+<style>
+  body {
+    text-align: center;
+  }
+</style>
+</html>
